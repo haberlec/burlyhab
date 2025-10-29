@@ -22,71 +22,84 @@
             <div class="container">
                 <a href="index.html" class="back-link">← Back to main page</a>
 
-                <!-- Discovery Image - Centered and Larger -->
-                <div style="text-align: center; margin: 3rem 0;">
-                    <img src="CSS_ML_2022Apr30_wArrows.gif"
-                         alt="Discovery image of asteroid 333005 Haberle"
-                         style="max-width: 90%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-                    <p class="discovery-caption" style="margin-top: 1.5rem; font-style: italic; color: var(--gunmetal); font-size: 1rem;">
-                        Mt. Lemmon Survey telescope image of asteroid 333005 Haberle<br>
-                        The asteroid appears as a moving point of light indicated by arrows<br>
-                        (Discovered February 13, 2010)
+                <!-- About Main Belt Asteroids - Moved to top -->
+                <div style="margin: 3rem 0; padding: 2rem; background: var(--alice-blue); border-radius: 8px;">
+                    <h2 style="color: var(--hunter-green); margin-bottom: 1.5rem; text-align: center;">Main Belt Asteroids</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Main belt asteroids orbit the Sun between Mars and Jupiter, typically at distances of 2.1 to 3.3 astronomical units (AU).
+                        These rocky bodies are remnants from the early Solar System that never coalesced into a planet due to Jupiter's gravitational influence.
+                        The main asteroid belt contains millions of objects ranging from tiny pebbles to the dwarf planet Ceres, which is nearly 1,000 km in diameter.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">
+                        Studying main belt asteroids like 333005 Haberle provides crucial insights into the conditions present during planetary formation
+                        4.6 billion years ago. Their compositions and orbits preserve a record of the early Solar System's evolution, making them
+                        invaluable targets for scientific investigation.
                     </p>
                 </div>
 
-                <!-- Official Naming Citation & Orbital Data -->
-                <div class="naming-story">
-                    <h3>Official Naming Citation</h3>
-                    <p style="font-size: 1.2rem; font-style: italic; text-align: center; margin: 2rem 0 3rem 0;">
-                        "Christopher Haberle (b. 1985) is an American geologist. He was a member of the OSIRIS-REx Thermal Emission
-                        Spectrometer instrument team and is Deputy Instrument Scientist for the OSIRIS-APEX extended mission."
-                    </p>
+                <!-- Official Naming Citation - Full Width Centered -->
+                <div style="margin: 3rem 0;">
+                    <h2 style="color: var(--hunter-green); margin-bottom: 2rem; text-align: center;">Official Naming Citation</h2>
+                    <div style="background: white; padding: 2rem 3rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto;">
+                        <p style="font-size: 1.25rem; font-style: italic; line-height: 1.8; color: var(--gunmetal); text-align: center;">
+                            "Christopher Haberle (b. 1985) is an American geologist. He was a member of the OSIRIS-REx Thermal Emission
+                            Spectrometer instrument team and is Deputy Instrument Scientist for the OSIRIS-APEX extended mission."
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--cambridge-blue); margin-top: 1.5rem; text-align: center;">
+                            — International Astronomical Union
+                        </p>
+                    </div>
+                </div>
 
-                    <table class="orbital-table" style="background: rgba(255,255,255,0.15); border-radius: 8px; overflow: hidden;">
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Designation</td>
-                            <td style="color: white;">333005 Haberle</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Provisional Designations</td>
-                            <td style="color: white;">2010 HC56, 2011 JV15</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Orbit Type</td>
-                            <td style="color: white;">Main Belt Asteroid</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Semi-major Axis</td>
-                            <td style="color: white;">3.135 AU</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Eccentricity</td>
-                            <td style="color: white;">0.060</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Inclination</td>
-                            <td style="color: white;">17.32°</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Orbital Period</td>
-                            <td style="color: white;">5.55 years</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Absolute Magnitude</td>
-                            <td style="color: white;">15.86</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Discovery Date</td>
-                            <td style="color: white;">February 13, 2010</td>
-                        </tr>
-                        <tr>
-                            <td style="color: rgba(255,255,255,0.9);">Discovery Site</td>
-                            <td style="color: white;">Mt. Lemmon Survey</td>
-                        </tr>
-                    </table>
-                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 1rem; text-align: center;">
-                        <em>Data from the <a href="https://minorplanetcenter.net/db_search/show_object?object_id=333005" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: underline;">Minor Planet Center</a></em>
-                    </p>
+                <!-- Side-by-side layout: Discovery Image and Orbital Data -->
+                <div class="discovery-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; margin: 3rem 0;">
+                    <!-- Left: Discovery Image -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+                        <img src="CSS_ML_2022Apr30_wArrows.gif"
+                             alt="Discovery image of asteroid 333005 Haberle"
+                             style="width: 100%; height: auto; max-height: 450px; object-fit: contain; border-radius: 4px;">
+                    </div>
+
+                    <!-- Right: Orbital Properties Table -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: center;">
+                        <table class="orbital-table" style="background: transparent; width: 100%; border-spacing: 0;">
+                            <tr>
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Designation</td>
+                                <td style="color: var(--hunter-green); font-weight: 600; padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">333005 Haberle</td>
+                            </tr>
+                            <tr style="background: rgba(111,160,136,0.03);">
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Semi-major Axis</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">3.135 AU</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Eccentricity</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">0.060</td>
+                            </tr>
+                            <tr style="background: rgba(111,160,136,0.03);">
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Inclination</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">17.32°</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Orbital Period</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">5.55 years</td>
+                            </tr>
+                            <tr style="background: rgba(111,160,136,0.03);">
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Magnitude (H)</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">15.86</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Discovery Date</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">Feb 13, 2010</td>
+                            </tr>
+                            <tr style="background: rgba(111,160,136,0.03);">
+                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; font-weight: 500;">Discovery Site</td>
+                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; text-align: right;">Mt. Lemmon</td>
+                            </tr>
+                        </table>
+                        <p style="font-size: 0.85rem; color: var(--gunmetal); margin-top: 1.5rem; text-align: center;">
+                            <em>Data source: <a href="https://minorplanetcenter.net/db_search/show_object?object_id=333005" target="_blank" style="color: var(--savoy-blue);">Minor Planet Center</a></em>
+                        </p>
+                    </div>
                 </div>
 
                 <div class="orbit-viz">
@@ -145,20 +158,6 @@
                             and orientation in space.
                         </p>
                     </div>
-                </div>
-
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--alice-blue); border-radius: 8px;">
-                    <h3 style="color: var(--hunter-green); margin-bottom: 1rem;">About Main Belt Asteroids</h3>
-                    <p>
-                        Main belt asteroids orbit the Sun between Mars and Jupiter, typically at distances of 2.1 to 3.3 astronomical units (AU).
-                        These rocky bodies are remnants from the early Solar System that never coalesced into a planet due to Jupiter's gravitational influence.
-                        The main asteroid belt contains millions of objects ranging from tiny pebbles to the dwarf planet Ceres, which is nearly 1,000 km in diameter.
-                    </p>
-                    <p style="margin-top: 1rem;">
-                        Studying main belt asteroids like 333005 Haberle provides crucial insights into the conditions present during planetary formation
-                        4.6 billion years ago. Their compositions and orbits preserve a record of the early Solar System's evolution, making them
-                        invaluable targets for scientific investigation.
-                    </p>
                 </div>
 
                 <p style="margin-top: 3rem; text-align: center;">

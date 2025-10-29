@@ -256,10 +256,30 @@
     text-decoration: underline;
 }
 
+/* Discovery Section Side-by-Side Layout */
+.discovery-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin: 3rem 0;
+}
+
+.discovery-section > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .discovery-section {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .discovery-section > div {
+        min-height: auto;
     }
 
     .asteroid-title {
