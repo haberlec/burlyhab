@@ -10,7 +10,8 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: '.',
-  base: '/burlyhab/',
+  base: '/',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     rollupOptions: {
