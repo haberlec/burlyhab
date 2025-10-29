@@ -7,6 +7,129 @@
     <title>Asteroid 333005 Haberle - Christopher Haberle, Ph.D.</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="src/css/pages/asteroid.css">
+    <style>
+        /* Mobile-first responsive improvements */
+        @media (max-width: 768px) {
+            /* Fix side-by-side layout on mobile */
+            .discovery-section {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+                margin: 2rem 0 !important;
+            }
+
+            /* Improve table container on mobile */
+            .discovery-section > div {
+                padding: 1.5rem !important;
+            }
+
+            /* Make GIF responsive */
+            .discovery-section img {
+                max-height: 300px !important;
+            }
+
+            /* Improve 3D visualization on mobile */
+            #orbit-container {
+                height: 350px !important;
+                touch-action: pan-y pinch-zoom;
+            }
+
+            /* Hide desktop controls, show mobile-friendly version */
+            #orbit-container > div[style*="bottom: 10px"] {
+                bottom: 5px !important;
+                left: 5px !important;
+                right: 5px !important;
+                padding: 8px !important;
+                font-size: 0.75rem !important;
+                background: rgba(0,0,0,0.85) !important;
+            }
+
+            #info-overlay {
+                top: 5px !important;
+                right: 5px !important;
+                font-size: 0.75rem !important;
+                padding: 6px !important;
+                max-width: 120px !important;
+            }
+
+            /* Reset button mobile style */
+            #reset-view {
+                padding: 6px 10px !important;
+                font-size: 0.8rem !important;
+                margin-top: 8px !important;
+                width: 100% !important;
+            }
+
+            /* Main Belt section padding */
+            .section > div > div:first-child {
+                padding: 1.5rem !important;
+                margin: 1.5rem 0 !important;
+            }
+
+            /* Citation container */
+            .citation-container {
+                margin: 2rem 0 !important;
+            }
+
+            /* Hero adjustments */
+            .asteroid-hero {
+                padding: 2rem 1rem !important;
+            }
+
+            .asteroid-title {
+                font-size: 1.75rem !important;
+            }
+
+            .asteroid-subtitle {
+                font-size: 1.1rem !important;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 480px) {
+            /* Even more compact table */
+            .orbital-table td {
+                padding: 0.6rem 0.4rem !important;
+                font-size: 0.8rem !important;
+            }
+
+            /* Smaller visualization */
+            #orbit-container {
+                height: 300px !important;
+            }
+
+            /* More compact controls */
+            #orbit-container > div[style*="bottom: 10px"] br {
+                display: none;
+            }
+
+            #orbit-container > div[style*="bottom: 10px"] {
+                line-height: 1.3 !important;
+            }
+        }
+
+        /* Improve touch interactions */
+        @media (pointer: coarse) {
+            .back-link,
+            #reset-view,
+            a[href*="jpl.nasa.gov"] {
+                padding: 0.8rem 1.5rem !important;
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .asteroid-hero {
+                padding: 1.5rem 1rem !important;
+            }
+
+            #orbit-container {
+                height: 250px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="asteroid-hero">
@@ -38,14 +161,14 @@
                 </div>
 
                 <!-- Official Naming Citation - Full Width Centered -->
-                <div style="margin: 3rem 0;">
-                    <h2 style="color: var(--hunter-green); margin-bottom: 2rem; text-align: center;">Official Naming Citation</h2>
-                    <div style="background: white; padding: 2rem 3rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto;">
-                        <p style="font-size: 1.25rem; font-style: italic; line-height: 1.8; color: var(--gunmetal); text-align: center;">
+                <div class="citation-container" style="margin: 3rem 0;">
+                    <h2 style="color: var(--hunter-green); margin-bottom: 2rem; text-align: center; font-size: clamp(1.5rem, 4vw, 2rem);">Official Naming Citation</h2>
+                    <div style="background: white; padding: clamp(1.5rem, 3vw, 3rem); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto;">
+                        <p style="font-size: clamp(1rem, 2.5vw, 1.25rem); font-style: italic; line-height: 1.8; color: var(--gunmetal); text-align: center;">
                             "Christopher Haberle (b. 1985) is an American geologist. He was a member of the OSIRIS-REx Thermal Emission
                             Spectrometer instrument team and is Deputy Instrument Scientist for the OSIRIS-APEX extended mission."
                         </p>
-                        <p style="font-size: 0.95rem; color: var(--cambridge-blue); margin-top: 1.5rem; text-align: center;">
+                        <p style="font-size: clamp(0.85rem, 2vw, 0.95rem); color: var(--cambridge-blue); margin-top: 1.5rem; text-align: center;">
                             — International Astronomical Union
                         </p>
                     </div>
@@ -64,36 +187,36 @@
                     <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: center;">
                         <table class="orbital-table" style="background: transparent; width: 100%; border-spacing: 0;">
                             <tr>
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Designation</td>
-                                <td style="color: var(--hunter-green); font-weight: 600; padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">333005 Haberle</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Designation</td>
+                                <td style="color: var(--hunter-green); font-weight: 600; padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">333005 Haberle</td>
                             </tr>
                             <tr style="background: rgba(111,160,136,0.03);">
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Semi-major Axis</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">3.135 AU</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Semi-major Axis</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">3.135 AU</td>
                             </tr>
                             <tr>
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Eccentricity</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">0.060</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Eccentricity</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">0.060</td>
                             </tr>
                             <tr style="background: rgba(111,160,136,0.03);">
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Inclination</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">17.32°</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Inclination</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">17.32°</td>
                             </tr>
                             <tr>
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Orbital Period</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">5.55 years</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Orbital Period</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">5.55 years</td>
                             </tr>
                             <tr style="background: rgba(111,160,136,0.03);">
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Magnitude (H)</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">15.86</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Magnitude (H)</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">15.86</td>
                             </tr>
                             <tr>
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500;">Discovery Date</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right;">Feb 13, 2010</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Discovery Date</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); border-bottom: 1px solid rgba(0,0,0,0.1); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">Feb 13, 2010</td>
                             </tr>
                             <tr style="background: rgba(111,160,136,0.03);">
-                                <td style="color: var(--gunmetal); padding: 1.3rem 1.2rem; font-weight: 500;">Discovery Site</td>
-                                <td style="color: var(--hunter-green); padding: 1.3rem 1.2rem; text-align: right;">Mt. Lemmon</td>
+                                <td style="color: var(--gunmetal); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); font-weight: 500; font-size: clamp(0.85rem, 2vw, 1rem);">Discovery Site</td>
+                                <td style="color: var(--hunter-green); padding: clamp(0.8rem, 2vw, 1.3rem) clamp(0.5rem, 2vw, 1.2rem); text-align: right; font-size: clamp(0.85rem, 2vw, 1rem);">Mt. Lemmon</td>
                             </tr>
                         </table>
                         <p style="font-size: 0.85rem; color: var(--gunmetal); margin-top: 1.5rem; text-align: center;">
