@@ -1,3 +1,6 @@
+// Import asteroid sprite image so Vite can process it
+import asteroidSpriteSrc from '/assets/images/optimized/asteroid_sprite.png';
+
 // Fade-in animation on scroll
 const observerOptions = {
     threshold: 0.1,
@@ -21,26 +24,8 @@ document.querySelectorAll('.publication, .project').forEach(el => {
     observer.observe(el);
 });
 
-// Microscope image cross-fade animation
-// The CSS animation handles the fade, but this provides optional control
-const microscopeOverlay = document.querySelector('.microscope-overlay');
-
-// Optional: You can control the animation timing here
-// Current animation is set to 6 seconds in CSS (3s fade in, 3s fade out)
-// To adjust timing, modify the animation duration in styles.css
-
-// Optional: Pause animation on hover (uncomment if desired)
-/*
-const heroHeader = document.querySelector('.hero-header');
-if (heroHeader && microscopeOverlay) {
-    heroHeader.addEventListener('mouseenter', () => {
-        microscopeOverlay.style.animationPlayState = 'paused';
-    });
-    heroHeader.addEventListener('mouseleave', () => {
-        microscopeOverlay.style.animationPlayState = 'running';
-    });
-}
-*/
+// Microscope image cross-fade animation is handled by CSS
+// Animation is set to 6 seconds in CSS (3s fade in, 3s fade out)
 
 // 8-bit Asteroid Animation with Variable Movement
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create the asteroid sprite image
     const asteroidSprite = document.createElement('img');
-    asteroidSprite.src = 'assets/images/optimized/asteroid_sprite.png';
+    asteroidSprite.src = asteroidSpriteSrc;
     asteroidSprite.alt = 'Asteroid 333005 Haberle';
     asteroidSprite.className = 'asteroid-sprite';
     asteroidSprite.width = 200;
@@ -195,5 +180,84 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset arc on resize to avoid weird behavior
         currentArc = null;
         progress = 0;
+    });
+
+    // Laser shooting feature
+    document.addEventListener('click', (event) => {
+        // Don't shoot laser if clicking on interactive elements
+        if (event.target.closest('a, button, input, select, textarea')) {
+            return;
+        }
+
+        // Create laser pulse
+        const laser = document.createElement('div');
+        laser.className = 'laser-pulse';
+        laser.style.left = event.clientX + 'px';
+
+        // Start from bottom of screen
+        let laserY = window.innerHeight - 30; // Start just above bottom
+        laser.style.top = laserY + 'px';
+        document.body.appendChild(laser);
+
+        // Get click position for collision detection
+        const laserX = event.clientX;
+
+        // Animate laser pulse moving up
+        const laserSpeed = 20; // pixels per frame
+
+        const shootLaser = () => {
+            // Update asteroid position each frame (since it's moving)
+            const asteroidRect = asteroidLink.getBoundingClientRect();
+
+            // Move laser up
+            laserY -= laserSpeed;
+            laser.style.top = laserY + 'px';
+
+            // Check for collision (laser pulse center with asteroid)
+            const laserCenterY = laserY + 30; // Center of 60px tall pulse
+            const asteroidLeft = asteroidRect.left;
+            const asteroidRight = asteroidRect.right;
+            const asteroidTop = asteroidRect.top;
+            const asteroidBottom = asteroidRect.bottom;
+
+            // Check if laser x position is within asteroid bounds
+            if (laserX >= asteroidLeft && laserX <= asteroidRight) {
+                // Check if laser has reached asteroid vertically
+                if (laserCenterY <= asteroidBottom && laserCenterY >= asteroidTop) {
+                    // Hit detected! Create explosion effect
+                    const explosion = document.createElement('div');
+                    explosion.className = 'laser-explosion';
+                    explosion.style.left = (asteroidRect.left + asteroidRect.width / 2) + 'px';
+                    explosion.style.top = (asteroidRect.top + asteroidRect.height / 2) + 'px';
+                    document.body.appendChild(explosion);
+
+                    // Remove explosion after animation
+                    setTimeout(() => {
+                        explosion.remove();
+                    }, 500);
+
+                    // Remove laser
+                    laser.remove();
+
+                    // Navigate to asteroid page after brief delay
+                    setTimeout(() => {
+                        window.location.href = 'asteroid.html';
+                    }, 300);
+
+                    return; // Stop the animation
+                }
+            }
+
+            // Continue shooting if not off screen
+            if (laserY > -100) {
+                requestAnimationFrame(shootLaser);
+            } else {
+                // Remove laser when it goes off screen
+                laser.remove();
+            }
+        };
+
+        // Start animation
+        requestAnimationFrame(shootLaser);
     });
 });
