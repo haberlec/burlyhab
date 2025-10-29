@@ -1,0 +1,416 @@
+/* Removed habseteroid.css import - now using optimized PNG sprite */
+
+/* Component Imports */
+@import url('src/css/components/project-cards.css');
+
+/* Color Palette Variables */
+:root {
+    /* Primary Colors */
+    --gunmetal: #1B282F;
+    --tea-green: #D1E4B4;
+    --cambridge-blue: #6FA088;
+    --savoy-blue: #4E5DA4;
+    --eerie-black: #181F1B;
+    --hunter-green: #3B5947;
+
+    /* Additional utility colors */
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-text: var(--gunmetal);
+    --light-text: #6c757d;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-gray);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+    background-color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.section:nth-child(even) {
+    background-color: #f5f8f3; /* Subtle tea green tint */
+}
+
+h2 {
+    color: var(--gunmetal);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--cambridge-blue);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--hunter-green);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h4 {
+    color: var(--gunmetal);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Hero Header with Microscope Images */
+.hero-header {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--eerie-black);
+}
+
+.microscope-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.microscope-base,
+.microscope-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.microscope-base img,
+.microscope-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.microscope-base {
+    z-index: 1;
+}
+
+.microscope-overlay {
+    z-index: 2;
+    animation: fadeInOut 6s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, rgba(27, 40, 47, 0.85), rgba(59, 89, 71, 0.85));
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(111, 160, 136, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    color: rgba(209, 228, 180, 0.95); /* Tea green accent */
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-affiliation {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Research Section */
+.research-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.research-list li {
+    background-color: rgba(209, 228, 180, 0.2); /* Light tea green */
+    padding: 1rem;
+    border-left: 4px solid var(--cambridge-blue);
+    font-size: 1.05rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(111, 160, 136, 0.08); /* Very light cambridge blue */
+    border-radius: 5px;
+    border-left: 4px solid var(--hunter-green);
+}
+
+.project h4 {
+    color: var(--gunmetal);
+}
+
+.project p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.project-role {
+    color: var(--savoy-blue);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(111, 160, 136, 0.3);
+}
+
+/* Publications Section */
+.publication {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(209, 228, 180, 0.1); /* Very light tea green */
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.publication:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(27, 40, 47, 0.15);
+}
+
+.pub-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--gunmetal);
+    margin-bottom: 0.5rem;
+}
+
+.pub-authors {
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+.pub-authors .highlight-author {
+    font-weight: 700;
+    color: var(--gunmetal);
+}
+
+.pub-venue {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.pub-link {
+    color: var(--savoy-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pub-link:hover {
+    text-decoration: underline;
+    color: var(--cambridge-blue);
+}
+
+.view-all {
+    color: var(--savoy-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+    color: var(--cambridge-blue);
+}
+
+/* Teaching Section */
+.course {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(78, 93, 164, 0.08); /* Very light savoy blue */
+    border-radius: 5px;
+    border-left: 3px solid var(--savoy-blue);
+}
+
+.course h4 {
+    margin-bottom: 0.25rem;
+    color: var(--gunmetal);
+}
+
+.course p {
+    color: var(--light-text);
+}
+
+/* Contact Section */
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: var(--savoy-blue);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: var(--cambridge-blue);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--cambridge-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--hunter-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--gunmetal);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 3px solid var(--cambridge-blue);
+}
+
+/* 8-bit Asteroid Animation */
+.floating-asteroid {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    text-decoration: none;
+    animation: orbitMotion 30s infinite linear;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Asteroid sprite image */
+.asteroid-sprite {
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    animation: asteroidSpin 8s infinite linear;
+    display: block;
+}
+
+/* Hover effect */
+.floating-asteroid:hover .asteroid-sprite {
+    filter: brightness(1.2);
+}
+
+/* Orbital path animation */
+@keyframes orbitMotion {
+    from {
+        transform: rotate(0deg) translateX(300px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    }
+}
+
+/* Asteroid spinning */
+@keyframes asteroidSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Variable movement will be added via JavaScript */
+.floating-asteroid.variable-motion {
+    animation: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-header {
+        height: 400px;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-affiliation {
+        font-size: 1rem;
+    }
+
+    .research-list {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}

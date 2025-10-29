@@ -1,0 +1,302 @@
+/* Asteroid Page Specific Styles */
+
+.asteroid-hero {
+    background: linear-gradient(135deg, #0b1929 0%, #1a2f4a 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.asteroid-hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 20%, rgba(255,255,255,0.1) 20.5%, transparent 21%);
+    background-size: 20px 20px;
+    animation: drift 60s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.asteroid-content {
+    position: relative;
+    z-index: 1;
+}
+
+.asteroid-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.asteroid-subtitle {
+    font-size: 1.3rem;
+    color: var(--alice-blue);
+    margin-bottom: 0.5rem;
+}
+
+.orbital-data {
+    background: var(--alice-blue);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.orbital-data h3 {
+    color: var(--hunter-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.orbital-table {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.orbital-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.orbital-table td {
+    padding: 0.8rem 0;
+}
+
+.orbital-table td:first-child {
+    font-weight: 600;
+    color: var(--gunmetal);
+    width: 50%;
+}
+
+.orbital-table td:last-child {
+    text-align: right;
+    font-family: 'Courier New', monospace;
+}
+
+.orbit-viz {
+    margin-top: 3rem;
+    background: var(--alice-blue);
+    padding: 2rem;
+    border-radius: 8px;
+    min-height: 600px;
+}
+
+.orbit-viz h3 {
+    color: var(--hunter-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.orbit-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+}
+
+.naming-story {
+    background: linear-gradient(135deg, var(--cambridge-blue) 0%, var(--savoy-blue) 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.naming-story h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.naming-story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--savoy-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: var(--cambridge-blue);
+}
+
+/* Discovery Image Styles */
+.discovery-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.discovery-image img {
+    max-width: 90%;
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.discovery-caption {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: var(--gunmetal);
+    font-size: 1rem;
+}
+
+/* Orbit Container Styles */
+#orbit-container {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 8px;
+    position: relative;
+}
+
+#loading-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+}
+
+#orbit-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Controls Overlay */
+.controls-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.controls-overlay strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reset-view {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: var(--savoy-blue);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#reset-view:hover {
+    background: var(--cambridge-blue);
+}
+
+/* Info Overlay */
+#info-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    max-width: 200px;
+}
+
+/* Citation Styles */
+.citation-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.citation-description {
+    margin-top: 2rem;
+}
+
+/* Data Table Container */
+.orbital-data-container {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.data-source {
+    font-size: 0.9rem;
+    color: var(--gunmetal);
+    margin-top: 1rem;
+}
+
+.data-source em {
+    font-style: italic;
+}
+
+.data-source a {
+    color: var(--savoy-blue);
+}
+
+.data-source a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .discovery-section {
+        grid-template-columns: 1fr;
+    }
+
+    .asteroid-title {
+        font-size: 2rem;
+    }
+
+    .asteroid-hero {
+        padding: 3rem 1rem;
+    }
+
+    .naming-story {
+        padding: 2rem 1.5rem;
+    }
+
+    .orbital-data {
+        padding: 1.5rem;
+    }
+
+    .orbit-viz {
+        padding: 1.5rem;
+    }
+
+    #orbit-container {
+        height: 400px;
+    }
+
+    .controls-overlay {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    #info-overlay {
+        font-size: 0.8rem;
+        max-width: 150px;
+    }
+
+    .discovery-image img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Box-Shadow Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/pages/editor.css">
+</head>
+<body class="editor-page">
+    <h1>🎨 Asteroid Box-Shadow Editor</h1>
+
+    <div class="container">
+        <div class="editor-panel">
+            <div class="canvas-container">
+                <canvas id="asteroidCanvas" width="800" height="800"></canvas>
+                <div class="info">
+                    <strong>Left Click:</strong> Add/Remove pixel |
+                    <strong>Shift+Click:</strong> Erase |
+                    Grid: -100px to +100px (center at 0,0)
+                </div>
+            </div>
+
+            <div class="controls">
+                <h3>Import Box-Shadow</h3>
+                <div style="margin-bottom: 20px;">
+                    <textarea id="importBox" placeholder="Paste your box-shadow CSS here..." style="width: 100%; height: 100px; background: #1a1a1a; color: #f0f0f0; border: 1px solid #666; padding: 10px; font-family: 'Courier New', monospace; font-size: 12px;"></textarea>
+                    <button onclick="importFromTextarea()" style="margin-top: 10px;">Import Box-Shadow</button>
+                    <button onclick="loadFromFile()">Load from File</button>
+                    <input type="file" id="fileInput" accept=".css,.txt" style="display: none;" onchange="handleFileSelect(event)">
+                </div>
+
+                <h3>Color Palette</h3>
+                <div class="color-palette">
+                    <div class="color-btn active" data-color="#000000" style="background: #000000;" title="Black (outline)"></div>
+                    <div class="color-btn" data-color="#333333" style="background: #333333;" title="Dark Gray"></div>
+                    <div class="color-btn" data-color="#555555" style="background: #555555;" title="Medium Dark"></div>
+                    <div class="color-btn" data-color="#888888" style="background: #888888;" title="Gray"></div>
+                    <div class="color-btn" data-color="#AAAAAA" style="background: #AAAAAA;" title="Light Gray"></div>
+                    <div class="color-btn" data-color="#CCCCCC" style="background: #CCCCCC;" title="Lighter"></div>
+                    <div class="color-btn" data-color="#EEEEEE" style="background: #EEEEEE;" title="Lightest"></div>
+                    <div class="color-btn" data-color="ERASE" style="background: repeating-linear-gradient(45deg, #f00, #f00 5px, #fff 5px, #fff 10px);" title="Eraser"></div>
+                </div>
+
+                <div class="pixel-size">
+                    <label>Pixel Size: <input type="number" id="pixelSize" value="5" min="1" max="20"> px</label>
+                    <button onclick="updatePixelSize()">Update</button>
+                </div>
+
+                <div class="pixel-size">
+                    <label>Grid Range: <input type="number" id="gridRange" value="100" min="50" max="500" step="10"> px</label>
+                    <button onclick="updateGridRange()">Update</button>
+                    <span style="margin-left: 10px; color: #888; font-size: 12px;">(± range from center)</span>
+                </div>
+
+                <h3>Canvas Background</h3>
+                <div style="margin-bottom: 20px;">
+                    <label>Background Color:
+                        <input type="color" id="bgColor" value="#ffffff" style="width: 60px; height: 30px; border: 1px solid #666; cursor: pointer;">
+                    </label>
+                    <button onclick="updateBackground()">Apply</button>
+                    <button onclick="setBackground('#ffffff')">White</button>
+                    <button onclick="setBackground('#000000')">Black</button>
+                    <button onclick="setBackground('#ff00ff')">Magenta</button>
+                    <button onclick="setBackground('#00ff00')">Green</button>
+                </div>
+
+                <div>
+                    <button onclick="clearCanvas()">Clear All</button>
+                    <button onclick="drawCircle()">Draw Circle</button>
+                    <button onclick="fillCenter()">Fill Center (0,0)</button>
+                    <button onclick="findTransparent()">Find Transparent Pixels</button>
+                    <button onclick="exportCSS()">Export CSS</button>
+                    <button onclick="copyToClipboard()">Copy CSS</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-panel">
+            <h3>CSS Output</h3>
+            <div id="pixelCount" class="info">Pixels: 0</div>
+            <div id="cssOutput">/* Click on canvas to start drawing */</div>
+
+            <div class="preview">
+                <h3>Live Preview</h3>
+                <div class="asteroid-preview" id="asteroidPreview"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/js/modules/asteroid-editor.js"></script>
+</body>
+</html>

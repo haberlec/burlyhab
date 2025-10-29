@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete list of publications by Christopher Haberle, Ph.D.">
+    <title>Publications - Christopher Haberle, Ph.D.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/pages/publications.css">
+</head>
+<body>
+    <header class="hero-header" style="height: 200px;">
+        <div class="hero-content">
+            <h1>Publications</h1>
+            <p class="hero-title">Christopher Haberle, Ph.D.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <a href="index.html" class="back-link">← Back to main page</a>
+
+                <h2>Peer-Reviewed Journal Articles</h2>
+
+                <!-- Search and Filter Controls -->
+                <div class="publications-controls" style="margin: 2rem 0; padding: 1.5rem; background: #f5f5f5; border-radius: 8px;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <label for="pub-search" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Search Publications:</label>
+                            <input
+                                type="text"
+                                id="pub-search"
+                                placeholder="Search by title, author, or venue..."
+                                style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;"
+                            />
+                        </div>
+                        <div>
+                            <label for="year-filter" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Filter by Year:</label>
+                            <select
+                                id="year-filter"
+                                style="padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem; background: white;"
+                            >
+                                <option value="all">All Years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button
+                                id="clear-filters"
+                                style="margin-top: 1.7rem; padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;"
+                            >
+                                Clear Filters
+                            </button>
+                        </div>
+                    </div>
+                    <p id="publication-count" class="publication-count" style="margin-top: 1rem; margin-bottom: 0;">Loading publications...</p>
+                </div>
+
+                <!-- Publications List (will be dynamically populated) -->
+                <div id="publications-list">
+                <!-- In Preparation/Review -->
+                <div class="pub-year">In Preparation/Review</div>
+
+                <div class="publication">
+                    <p class="pub-title">Roughness reveals persistent daytime OH/H₂O on the Moon from equatorial to high latitudes (in prep)</p>
+                    <p class="pub-authors">Tai Udovicic, C.J., <span class="highlight-author">Haberle, C.W.</span>, Edwards, C.E., Bandfield, J.L., Gonzales, J.K., Ruiz, J.A., Farrand, W.F</p>
+                    <p class="pub-venue">Target Journal: Journal of Geophysical Research: Planets</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Thermal Metamorphism of the Sutter's Mill Carbonaceous Chondrite (in prep)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Garvie, L.A.J., Delbo, M., Toliou, A., Granvik, M., Christensen, P.R.</p>
+                    <p class="pub-venue">Target Journal: Proceedings of the National Academy of Sciences</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Prospecting for Magmatic Sulfide Ore Deposits Using Thermal-Infrared Emission Spectroscopy (in review)</p>
+                    <p class="pub-authors">Hubbard, K.M., <span class="highlight-author">Haberle, C.W.</span>, Elkins-Tanton, L.T., Christensen, P.R.</p>
+                    <p class="pub-venue">Target Journal: Journal of Geophysical Research: Planets</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Ferrobasalt of the Snake River Plain as an analog to Ti-bearing volcanics on the Moon (in prep)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Thorpe, M.T.</p>
+                    <p class="pub-venue">Target Journal: Earth and Planetary Science Letters</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Surface roughness of asteroid (101955) Bennu derived from OSIRIS-REx Thermal Emission Spectrometer observations (in prep)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Edwards, C.E.</p>
+                    <p class="pub-venue">Target Journal: Geophysical Research Letters</p>
+                </div>
+
+                <!-- 2024 -->
+                <div class="pub-year">2024</div>
+
+                <div class="publication">
+                    <p class="pub-title">Rocks with extremely low thermal inertia at the OSIRIS-REx sample site on asteroid Bennu</p>
+                    <p class="pub-authors">Ryan, A.J., Rozitis, B., Munoz, D.P., Becker, K.J., Emery, J.P., Nolan, M.C., Bernacki, M., Delbo, M., Elder, C.E., Siegler, M., Jawin, E.R., Golish, D.R., Walsh, K.J., <span class="highlight-author">Haberle, C.W.</span>, Bennett, C.A., Edmundson, K.L., Hamilton, V.E., Christensen, P.R., Daly, M.G., Lauretta, D.S.</p>
+                    <p class="pub-venue">The Planetary Science Journal, 2024</p>
+                </div>
+
+                <!-- 2023 -->
+                <div class="pub-year">2023</div>
+
+                <div class="publication">
+                    <p class="pub-title">OSIRIS-APEX: An OSIRIS-REx Extended Mission to Asteroid Apophis</p>
+                    <p class="pub-authors">DellaGiustina, D.N., Nolan, M.C., Polit, A.T., Moreau, M.C., Golish, D.R., Adam, C.D., Antresasian, P., Ballouz, R.-L., Barnouin, O.S., Becker, K.J., Bennett, C.A., Binzel, R.P., Bos, B.J., Burns, R., Castro, N., Chesley, S.R., Christensen, P.R., Crombie, M.K., Daly, M.G., Daly, R.T., Enos, H.L., Farnocchia, D., Freund, S., Garcia, R., Getzandanner, K., Guzewich, S., <span class="highlight-author">Haberle, C.W.</span>, et al.</p>
+                    <p class="pub-venue">The Planetary Science Journal, 2023</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Diurnal and Seasonal Mapping of Martian Ices with EMIRS</p>
+                    <p class="pub-authors">Stcherbinine, A., Edwards, C.S., Smith, M.D., Wolff, M.J., <span class="highlight-author">Haberle, C.W.</span>, Tunaiji, E., Smith, N.S., Saboi, K., Anwar, S., Lange, L., Christensen, P.R</p>
+                    <p class="pub-venue">Geophysical Research Letters, 2023</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Thermal-Infrared Emission Spectroscopy of Graybody Minerals (Sulfide): Implications for Extraterrestrial Exploration for Magmatic Ore Deposits (in press)</p>
+                    <p class="pub-authors">Hubbard, K.M., <span class="highlight-author">Haberle, C.W.</span>, Elkins-Tanton, L.T., Christensen, P.R., Semken, S.</p>
+                    <p class="pub-venue">Earth and Space Science, 2023</p>
+                </div>
+
+                <!-- 2021 -->
+                <div class="pub-year">2021</div>
+
+                <div class="publication">
+                    <p class="pub-title">Evidence for limited compositional and particle size variation on asteroid (101955) Bennu from thermal infrared spectroscopy</p>
+                    <p class="pub-authors">Hamilton, V.E., Christensen, P.R., Kaplan, H.H., <span class="highlight-author">Haberle, C.W.</span>, Rogers, A.D., Glotch, T.D., Breitenfeld, L.B., Goodrich, C.A., Schrader, D.L., McCoy, T.J., Lantz, C., Hanna, R.D., Simon, A.A., Brucato, J.R., Clark, B.E., Lauretta, D.S.</p>
+                    <p class="pub-venue">Astronomy and Astrophysics, 2021</p>
+                </div>
+
+                <!-- 2020 -->
+                <div class="pub-year">2020</div>
+
+                <div class="publication">
+                    <p class="pub-title">Effects of small crystallite size on the thermal infrared (vibrational) spectra of minerals</p>
+                    <p class="pub-authors">Hamilton, V.E., <span class="highlight-author">Haberle, C.W.</span>, Mayerhöfer, T.G.</p>
+                    <p class="pub-venue">American Mineralogist, 2020</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Asteroid (101955) Bennu's Weak Boulders and Thermally Anomalous Equator</p>
+                    <p class="pub-authors">Rozitis, B., Ryan, A.J., Emery, J.P., Christensen, P.R., Hamilton, V.E., Simon, A.A., Reuter, D.C., Al Asad, M., Ballouz, R.-L., Bandfield, J.L., Barnouin, O.S., Bennett, C.A., Bernacki, M., Burke, K.N., Cambioni, S., Clark, B.E., Daly, M.G., Delbo, M., DellaGiustina, D.N., Elder, C.M., Hanna, R.D., <span class="highlight-author">Haberle, C.W.</span>, et al.</p>
+                    <p class="pub-venue">Science Advances, 2020</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Signatures of the post-hydration heating of highly aqueously altered CM carbonaceous chondrites and implications for interpreting asteroid sample returns</p>
+                    <p class="pub-authors">Lindgren, P., Lee, M.R., Sparkes, R., Greenwood, R.C., Hanna, R.D., Franchi, I.A., King, A.J., Floyd, C., Martin, P.E., Hamilton, V.E., <span class="highlight-author">Haberle, C.W.</span></p>
+                    <p class="pub-venue">Geochimica et Cosmochimica Acta, 2020</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Thermal Fatigue as a Driving Mechanism for Activity on Asteroid Bennu</p>
+                    <p class="pub-authors">Molaro, J.L., Hergenrother, C.W., Chesley, S.R., Walsh, K.J., Hanna, R.D., <span class="highlight-author">Haberle, C.W.</span>, Schwartz, S.R., Ballouz, R.L., Bottke, W.F., Campins, H.J., Lauretta, D.S.</p>
+                    <p class="pub-venue">Journal of Geophysical Research: Planets, 2020</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Distinguishing relative aqueous alteration and heating among CM chondrites with IR spectroscopy</p>
+                    <p class="pub-authors">Hanna, R.D., Hamilton, V.E., <span class="highlight-author">Haberle, C.W.</span>, King, A.J., Abreu, N.M., Friedrich, J.M.</p>
+                    <p class="pub-venue">Icarus, 2020</p>
+                </div>
+
+                <!-- 2019 -->
+                <div class="pub-year">2019</div>
+
+                <div class="publication">
+                    <p class="pub-title">Evidence for widespread hydrated minerals on asteroid (101955) Bennu</p>
+                    <p class="pub-authors">Hamilton, V.E., Simon, A.A., Christensen, P.R., Reuter, D.C., Clark, B.E., Barucci, M.A., Bowles, N.E., Boynton, W.V., Brucato, J.R., Cloutis, E.A., Connolly, H.C., Donaldson Hanna, K.L., Emery, J.P., Enos, H.L., Fornasier, S., <span class="highlight-author">Haberle, C.W.</span>, Hanna, R.D., Howell, E.S., Kaplan, H.H., Keller, L.P., Lantz, C., Li, J.Y., Lim, L.F., McCoy, T.J., Merlin, F., Nolan, M.C., Praet, A., Rozitis, B., Sandford, S.A., Schrader, D.L., Thomas, C.A., Zou, X.D., Lauretta, D.S.</p>
+                    <p class="pub-venue">Nature Astronomy, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Strategic Planning Insights for Future Science-Driven Extravehicular Activity on Mars</p>
+                    <p class="pub-authors">Brady, A.L., Kobs Nawotniak, S.E., Hughes, S.S., Payler, S.J., Stevens, A.H., Cockell, C.S., Elphic, R.C., Sehlke, A., <span class="highlight-author">Haberle, C.W.</span>, Slater, G.F., Lim, D.S.S.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Basaltic Terrains in Idaho and Hawai'i as Planetary Analogs for Mars Geology and Astrobiology</p>
+                    <p class="pub-authors">Hughes, S.S., <span class="highlight-author">Haberle, C.W.</span>, Kobs Nawotniak, S.E., Sehlke, A., Garry, W.B., Elphic, R.C., Payler, S.J., Stevens, A.H., Cockell, C.S., Brady, A.L., Heldmann, J.L., Lim, D.S.S.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The BASALT Research Program: Designing and Developing Mission Elements in Support of Human Scientific Exploration of Mars</p>
+                    <p class="pub-authors">Lim, D.S.S., Abercromby, A.F.J., Kobs Nawotniak, S.E., Lees, D.S., Miller, M.J., Brady, A.L., Miller, M.J., Mirmalek, Z., Sehlke, A., Payler, S.J., Stevens, A.H., <span class="highlight-author">Haberle, C.W.</span>, Beaton, K.H., Chappell, S.P., Hughes, S.S., Cockell, C.S., Elphic, R.C., Downs, M.T., Heldmann, J.L.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">A Low-Diversity Microbiota Inhabits Extreme Terrestrial Basaltic Terrains and Their Fumaroles: Implications for the Exploration of Mars</p>
+                    <p class="pub-authors">Cockell, C.S., Harrison, J.P., Stevens, A.H., Payler, S.J., Hughes, S.S., Kobs Nawotniak, S.E., Brady, A.L., Elphic, R.C., <span class="highlight-author">Haberle, C.W.</span>, Sehlke, A., Beaton, K.H., Abercromby, A.F.J., Schwendner, P., Wadsworth, J., Landenmark, H., Cane, R., Dickinson, A.W., Nicholson, N., Perera, L., Lim, D.S.S.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Requirements for Portable Instrument Suites during Human Scientific Exploration of Mars</p>
+                    <p class="pub-authors">Sehlke, A., Mirmalek, Z., Burtt, D., <span class="highlight-author">Haberle, C.W.</span>, Santiago-Materese, D., Kobs Nawotniak, S.E., Hughes, S.S., Garry, W.B., Bramall, N., Brown, A.J., Heldmann, J.L., Lim, D.S.S.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Opportunities and Challenges of Promoting Scientific Dialog throughout Execution of Future Science-Driven Extravehicular Activity</p>
+                    <p class="pub-authors">Kobs Nawotniak, S.E., Miller, M.J., Stevens, A.H., Marquez, J.J., Payler, S.J., Brady, A.L., Hughes, S.S., <span class="highlight-author">Haberle, C.W.</span>, Sehlke, A., Beaton, K.H., Chappell, S.P., Elphic, R.C., Lim, D.S.S.</p>
+                    <p class="pub-venue">Astrobiology, 2019</p>
+                </div>
+
+                <!-- 2018 -->
+                <div class="pub-year">2018</div>
+
+                <div class="publication">
+                    <p class="pub-title">Integrating Analytical and Remote Sensing Techniques to Investigate the Petrology of Planetary Surfaces</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span></p>
+                    <p class="pub-venue">Dissertation, Arizona State University, 2018</p>
+                </div>
+
+                <!-- 2017 -->
+                <div class="pub-year">2017</div>
+
+                <div class="publication">
+                    <p class="pub-title">Extraterrestrial formation of oldhamite and portlandite through thermal metamorphism of calcite in the Sutter's Mill carbonaceous chondrite</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Garvie, L.A.J.</p>
+                    <p class="pub-venue">American Mineralogist, 2017</p>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Conference Presentations</h2>
+                <p class="publication-count">Total: 44 presentations</p>
+
+                <!-- 2023 -->
+                <div class="pub-year">2023</div>
+
+                <div class="publication">
+                    <p class="pub-title">Observations of Deimos from the Emirates Mars Mission (EMM) Flybys</p>
+                    <p class="pub-authors">Edwards, C.S., Osterloo, M.M., Fisher, C., Jeppesen, C., Smith, N.S., <span class="highlight-author">Haberle, C.W.</span>, Holsclaw, G., Wolff, M.J., Jones, A.R., Pilinski, E.B., Kubitschek, D., Deighan, J., Teil, T.T., Almatroushi, H.R., Parker, J., Carranza, E., Christensen, P.R., Reed, H.</p>
+                    <p class="pub-venue">AGU 2023 Fall Meeting, Abstract P43C-04</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Rocks on Mars: Shape and High Spatial Resolution Mapping from Thermal IR Wavelengths Observations</p>
+                    <p class="pub-authors">Piqueux, S., Kass, D.M., Kleinboehl, A., Mischna, M., Edwards, C.S., <span class="highlight-author">Haberle, C.W.</span>, Hamilton, V.E., Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2023 Fall Meeting, Abstract P41J-3294</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The VISible and Infrared ObservatioN System (VISIONS) Overview: A Low-Cost, Dual-Wavelength Imager for Planetary Science Applications</p>
+                    <p class="pub-authors">Lee, L., Edwards, C.S., <span class="highlight-author">Haberle, C.W.</span>, Shafer, M., Trilling, D., Janiszewska, J., Klingaman, A., Lillis, R.J.</p>
+                    <p class="pub-venue">AGU 2023 Fall Meeting, Abstract P34A-09</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Spectroscopic Characterization of Martian Nighttime CO2 Frost at Equatorial Latitudes with EMM/EMIRS</p>
+                    <p class="pub-authors">Stcherbinine, A., Edwards, C.S., <span class="highlight-author">Haberle, C.W.</span>, Smith, M.D., Lange, L., Piqueux, S.</p>
+                    <p class="pub-venue">AGU 2023 Fall Meeting, Abstract EP31D-2124</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Visible and Infrared Observation System (VISIONS) Overview</p>
+                    <p class="pub-authors">Lee, L., Edwards, C.S.E., <span class="highlight-author">Haberle, C.W.</span>, Shafer, M., Trilling, D., Janiszewska, J., Klingaman, A., Watson, W., Walcott, A., Zodrow, A., Ford, A., Malenowsky, A., Baker, A., Koeppel, A., Perkins, B., Cocke, B., Davis, B., Ye, C., Stephenson, D., Mendoza, E., Zuyle, H., Thompson, J., Heynssens, J., Perkins, K., Larrieu, L., Humes, O., Murphy, O., Howell, P., Wucinich, R., McGaughey, R., Ly, S., Sargent, S., Frohna, S., Inselman, S., Carter, T., Spencer, W., Purcell, D.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2023, no. 2232</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Mineralogical, Elemental, and Tomographic Reconnaissance Investigation for CLPS (METRIC): A Proposed Mission to the Lunar South Pole-Aitken Basin</p>
+                    <p class="pub-authors">Cannon, K.M., Rampe, E.B., Malaret, E., King, I., Chen, J., Gross, J., Yen, A., Wilbur, Z.E., Ewing, R.C., McNally, P., Hanna, R.D., Udry, A., Vaniman, D.T., Barnes, J.J., Gailhanou, M., Hamilton, J.A., Moiriarty III, D.A., Blake, D.F., Bergman, D., Obbard, R.W., Sole, A., Lucey, P., Sarrazin, P., Hammer, J., Lafuente, B., Downs, R.T., <span class="highlight-author">Haberle, C.W.</span>, Christoffersen, R., Prissel, K., Bullard, J., Prissel, T., Thompson, K., Vo, N.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2023, no. 2130</p>
+                </div>
+
+                <!-- 2022 -->
+                <div class="pub-year">2022</div>
+
+                <div class="publication">
+                    <p class="pub-title">Martian Surface Ice Mapping from EMM/EMIRS Temperature Retrievals</p>
+                    <p class="pub-authors">Stcherbinine, A., Edwards, C.S., Wolff, M.J., Altunaiji, E.S., <span class="highlight-author">Haberle, C.W.</span>, Smith, M.D., Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2022 Fall Meeting, Abstract P12C-04</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Mineralogical, Elemental, and Tomographic Reconnaissance Investigation for CLPS (METRIC)</p>
+                    <p class="pub-authors">Rampe, E.B., Cannon, K.M., Sarrazin, P., Blake, D.F., Obbard, R.W., Yen, A.S., Lucey, P., <span class="highlight-author">Haberle, C.W.</span>, Bergman, D., Hamilton, J.A., Bullard, J.W., Chen, J., Downs, R.T., Ewing, R.C., Hammer, J., Hanna, R.D., Lafuente, B., McNally, P., Taylor, G.J., Udry, A., Vaniman, D.T., Wilbur, Z.E., Barnes, J.J., Christoffersen, R., Gailhanou, M., Sole, A., Thompson, K.A., Vo, N.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2022, no. 2093</p>
+                </div>
+
+                <!-- 2021 -->
+                <div class="pub-year">2021</div>
+
+                <div class="publication">
+                    <p class="pub-title">Surface Roughness of Bennu Derived from OSIRIS-REx Thermal Emission Spectrometer Observations</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Edwards, C.S., Tai-Udovicic, C., Bandfield, J.L., Clark, B.E.</p>
+                    <p class="pub-venue">Geological Society of America 2021, no. 108-12</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Predicting Emitted Radiance of Rough Lunar Surfaces to Inform Volatile Distribution</p>
+                    <p class="pub-authors">Tai-Udovicic, C., Gonzales, J.K., Ruiz, J.A., Edwards, C.S., <span class="highlight-author">Haberle, C.W.</span>, Farrand, W., Bandfield, J.L.</p>
+                    <p class="pub-venue">Geological Society of America 2021, no. 108-7</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Thermophysical Properties of Phobos from TES and THEMIS Observations</p>
+                    <p class="pub-authors">Edwards, C.S., Piqueux, S., Glotch, T.D., Hamilton, V.E., Duxbury, T., Hill, J., Christensen, P.R., <span class="highlight-author">Haberle, C.W.</span>, Smith, N., Bandfield, J.L.</p>
+                    <p class="pub-venue">Geological Society of America 2021, no. 78-11</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Compositions of Asteroid Bennu from the OSIRIS-REx Mission</p>
+                    <p class="pub-authors">Hamilton, V.E., Simon, A.A., Kaplan, H.H., Christensen, P.R., Reuter, D., DellaGiustina, D., <span class="highlight-author">Haberle, C.W.</span>, Breitenfeld, L., Clark, B.E., Lauretta, D.S.</p>
+                    <p class="pub-venue">Geological Society of America 2021, no. 43-5</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Thermal Infrared Evidence for Limited Compositional and Particle Size Variability on Asteroid (101955) Bennu</p>
+                    <p class="pub-authors">Hamilton, V.E., Christensen, P.R., Kaplan, H.H., <span class="highlight-author">Haberle, C.W.</span>, Rogers, A.D., Glotch, T.D., Breitenfeld, L.B., Goodrich, C.A., Schrader, D.L., McCoy, T.J., Lantz, C., Hanna, R.D., Simon, A.A., Brucato, J.R., Clark, B.E., Lauretta, D.S.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2021, no. 2148</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Thermal-Infrared Emission Spectroscopy of Graybody Materials: Sulfide</p>
+                    <p class="pub-authors">Hubbard, K.M., <span class="highlight-author">Haberle, C.W.</span>, Elkins-Tanton, L.T., Christensen, P.R.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2021, no. 2322</p>
+                </div>
+
+                <!-- 2020 (Cancelled) -->
+                <div class="pub-year">2020</div>
+
+                <div class="publication">
+                    <p class="pub-title">VNIR and TIR Spectral Characteristics of (101955) Bennu from OSIRIS-REx Detailed Survey and Reconnaissance A Observations</p>
+                    <p class="pub-authors">Hamilton, V.E., Simon, A.A., Kaplan, H.H., Christensen, P.R., Reuter, D.C., DellaGiustina, D.N., <span class="highlight-author">Haberle, C.W.</span>, Hanna, R.D., Brucato, J.R., Praet, A., Glotch, T.D., Rogers, A.D., Connolly, H.C., McCoy, T.J., Emery, J.P., Howell, E.S., Barucci, M.A., Clark, B.E., Lauretta, D.S.</p>
+                    <p class="pub-venue">*Cancelled* Lunar and Planetary Science Conference, no. 1049</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Sub-Pixel Temperature Mixing on the B-type Asteroid (101955) Bennu</p>
+                    <p class="pub-authors">Glotch, T.D., Rogers, A.D., Hamilton, V.E., Christensen, P.R., <span class="highlight-author">Haberle, C.W.</span>, Emery, J.P., Rozitis, B., Lauretta, D.S.</p>
+                    <p class="pub-venue">*Cancelled* Lunar and Planetary Science Conference, no. 1075</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Fatigue-driven Boulder Exfoliation and Particle Ejection on Bennu</p>
+                    <p class="pub-authors">Molaro, J.L., Hergenrother, C.W., Chesley, S.R., Hanna, R.D., <span class="highlight-author">Haberle, C.W.</span>, Ballouz, R.-L., Schwartz, S.R., Bottke, W.F., Walsh, K.J., Campins, H., Lauretta, D.S.</p>
+                    <p class="pub-venue">*Cancelled* Lunar and Planetary Science Conference, no. 1636</p>
+                </div>
+
+                <!-- 2019 -->
+                <div class="pub-year">2019</div>
+
+                <div class="publication">
+                    <p class="pub-title">Interpreting the Petrogenetic History of Martian Volcanic Rocks using Thermal Emission Spectroscopy and Thermodynamic Calculations of Phase Equilibria</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Christensen, P.R., Ruff, S.W.</p>
+                    <p class="pub-venue">AGU 2019 Fall Meeting, Abstract P33F-3494</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Characterization of the Effects of Anisothermality on OSIRIS-REx Thermal Emission Spectrometer Data</p>
+                    <p class="pub-authors">Glotch, T.D., Rogers, A.D., Hamilton, V.E., Christensen, P.R., <span class="highlight-author">Haberle, C.W.</span>, Emery, J.P., Rozitis, B., Lauretta, D.S.</p>
+                    <p class="pub-venue">AGU 2019 Fall Meeting, Abstract P33F-3499</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Mineralogy of Recently Fallen Carbonaceous Meteorites, Mukundpura and Sutter's Mill, in the Context of Asteroid (101955) Bennu</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Christensen, P.R., Garvie, L.A., Hamilton, V.E., Hanna, R.D., Connolly, H.C., Lauretta, D.S., OSIRIS-REx Team</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2019, no. 2144</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">OSIRIS-REx Arrives at Asteroid (101955) Bennu: Exploration of a Hydrated Primitive Near-Earth Asteroid</p>
+                    <p class="pub-authors">Lauretta, D.S., Al-Asad, M.M., Ballouz, R.-L., Barnouin, O.S., Bierhaus, E.B., Boynton, L.B., Calaway, M.J., Chojnacki, M., Christensen, P.R., Clark, B.E., Connolly Jr, H.C., Drouet d'Aubigny, C., Daly, M.G., Daly, R.T., Delbo, M., DellaGiustina, D.N., Dworkin, J.P., Emery, J.P., Enos, H.L., Farnocchia, D., Golish, D.R., <span class="highlight-author">Haberle, C.W.</span>, et al.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2019, no. 2132</p>
+                </div>
+
+                <!-- 2018 -->
+                <div class="pub-year">2018</div>
+
+                <div class="publication">
+                    <p class="pub-title">Ferrobasalt from the Snake River Plain and its Utility as a Spectral Planetary Analog</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2018 Fall Meeting, Abstract P51C-07</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Mineralogic Variability of Icelandic Palagonites: An Analog Study for Mars</p>
+                    <p class="pub-authors">Ackiss, S., Horgan, B., Scudder, N., Gudnason, J., <span class="highlight-author">Haberle, C.W.</span>, Thorsteinsson, T.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2018, no. 1773</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The microbial mats of Pavilion Lake microbialites: examining the relationship between photosynthesis and carbonate precipitation</p>
+                    <p class="pub-authors">Lim, D.S.S., Hawes, I., Mackey, T.J., Brady, A.L., Biddle, J., Anderson, D.T., Belan, M., Slater, G.F., Abercromby, A., Squyres, S.W., Delaney, M., <span class="highlight-author">Haberle, C.W.</span>, Cardman, Z.</p>
+                    <p class="pub-venue">AGU 2018 Fall Meeting, Abstract B23A-0183</p>
+                </div>
+
+                <!-- 2017 -->
+                <div class="pub-year">2017</div>
+
+                <div class="publication">
+                    <p class="pub-title">The Mineralogic Variability of Icelandic Palagonites: An Analog Study for Mars</p>
+                    <p class="pub-authors">Ackiss, S., Horgan, B., Gudnason, J., <span class="highlight-author">Haberle, C.W.</span>, Thorsteinsson, T., Thordarson, T.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2017, no. 2500</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">BASALT 2016: Mars Analog Research in Lava Terrains of Idaho and Hawaii</p>
+                    <p class="pub-authors">Kobs-Nawotniak, S., Lim, D.S.S, Hughes, S.S., Sehlke, A., Brady, A., Cockell, C., Payler, S., Stevens, A., <span class="highlight-author">Haberle, C.W.</span>, Elphic, R., Garry, W.B., Gibbons, E., Borg, C., Sandmeyer, E.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2017, no. 2793</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Revisiting the Alkaline Volcanic Rocks of Gusev Crater with Mini-TES</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Ruff, S.W., Christensen, P.R.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2017, no. 2497</p>
+                </div>
+
+                <!-- 2016 -->
+                <div class="pub-year">2016</div>
+
+                <div class="publication">
+                    <p class="pub-title">The alkaline volcanic rocks of Craters of the Moon National Monument, Idaho and the Columbia Hills of Gusev Crater, Mars (Invited)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Hughes, S.S., Kobs-Nawotniak, S., Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2016 Fall Meeting, Abstract P31E-01</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Lava Flow Alteration at Craters of the Moon, Idaho, as an Analog for Microbial Habitat on Mars</p>
+                    <p class="pub-authors">Kobs-Nawotniak, S., Hughes, S.S., Elphic, R.C., Sehlke, A., <span class="highlight-author">Haberle, C.W.</span>, Brady, A.L., Payler, S., Cockell, C.S., Lim, D.S.S.</p>
+                    <p class="pub-venue">AGU 2016 Fall Meeting, Abstract P31E-08</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The case of the missing vent: lessons in lava flow interpretation from Highway Flow, Craters of the Moon, Idaho</p>
+                    <p class="pub-authors">Hughes, S.S., Kobs-Nawotniak, S., <span class="highlight-author">Haberle, C.W.</span>, Downs, M., Sehlke, A., Elphic, R.C., Lim, D.S.S., Heldmann, J.L.</p>
+                    <p class="pub-venue">AGU 2016 Fall Meeting, Abstract P33D-2180</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Diverse Eruptions at ~2,200 Years B.P. on the Great Rift, Idaho: Inferences for Magma Dynamics along Volcanic Rift Zones</p>
+                    <p class="pub-authors">Hughes, S.S., Kobs-Nawotniak, S., Borg, C., Mallonee, H.C., Purcell, S., Neish, C., Garry, W.B., <span class="highlight-author">Haberle, C.W.</span>, Lim, D.S.S, Heldmann, J.L.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2016, no. 2841</p>
+                </div>
+
+                <!-- 2015 -->
+                <div class="pub-year">2015</div>
+
+                <div class="publication">
+                    <p class="pub-title">Overlapping Ballistic Ejecta Fields: Separating Distinct Blasts at Kings Bowl, Idaho</p>
+                    <p class="pub-authors">Borg, C., Kobs-Nawotniak, S., Hughes, S.S., Sears, D.W.G., Heldmann, J.L., Lim, D.S.S., <span class="highlight-author">Haberle, C.W.</span>, Sears, H., Elphic, R.C., Kobayashi, L., Garry, W.B., Neish, C., Karunatillake, S., Button, N., Purcell, S., Mallonee, H., Ostler, B.</p>
+                    <p class="pub-venue">AGU 2015 Fall Meeting, Abstract V51D-3065</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">A Study of the King's Bowl Phreatic Explosion Crater as a Planetary Analog</p>
+                    <p class="pub-authors">Sears, D.W.G, Hughes, S.S., Kobs-Nawotniak, S., Borg, C., Kim, K.J., Sears, K., Skok, J.R., Lim, D.S.S., Heldmann, J.L., <span class="highlight-author">Haberle, C.W.</span>, Downs, M., Tornabene, L., Osinski, G.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2015, no. 1601</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">The Geology of Inferno Chasm, Idaho: A Terrestrial Analog for Lunar Rilles</p>
+                    <p class="pub-authors">Garry, W.B., Hughes, S.S., Kobs-Nawotniak, S., Neish, C.D., <span class="highlight-author">Haberle, C.W.</span>, Heldmann, J.L., Lim, D.S.S</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2015, no. 1009</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">King's Bowl, Idaho - A Volcanic Analog for Fissure Eruptions, Pit Craters, and Dike Injection Along Rima Hyginus, Moon and Cyane Fossae, Mars</p>
+                    <p class="pub-authors">Hughes, S.S., Kobs-Nawotniak, S., Sears, D.W.G, Garry, W.B., <span class="highlight-author">Haberle, C.W.</span>, Bleacher, J.E., Lim, D.S.S, Heldmann, J.L.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2015, no. 2846</p>
+                </div>
+
+                <!-- 2014 -->
+                <div class="pub-year">2014</div>
+
+                <div class="publication">
+                    <p class="pub-title">A Study of the King's Bowl Phreatic Explosion Crater as an Analog to Pits on Solar System Exploration Target Bodies</p>
+                    <p class="pub-authors">Sears, D.W.G, Hughes, S.S., Kobs-Nawotniak, S., Borg, C., Kim, K.J., Sears, H., Skok, J.R., Elphic, R.C., Lim, D.S.S., Heldmann, J.L., <span class="highlight-author">Haberle, C.W.</span>, Guy, H., Kobayashi, L., Garry, W.B., Neish, C.</p>
+                    <p class="pub-venue">AGU 2014 Fall Meeting, Abstract P13D-3830</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">King's Bowl Pit Crater, Lava Field and Eruptive Fissure, Idaho – A Multipurpose Volcanic Planetary Analog</p>
+                    <p class="pub-authors">Hughes, S.S., Garry, W.B., Kobs-Nawotniak, S., Sears, D.W.G., Borg, C., Elphic, R.C., <span class="highlight-author">Haberle, C.W.</span>, Kobayashi, L., Lim, D.S.S., Sears, H., Skok, J.R., Heldmann, J.L.</p>
+                    <p class="pub-venue">AGU 2014 Fall Meeting, Abstract P13D-3831</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">A Study by Remote Sensing Methods of Volcanism at Craters of the Moon National Park, Idaho</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Hughes, S.S., Kobs-Nawotniak, S., Lim, D.S.S., Garry, W.B., Sears, D.W.G., Downs, M.T., Busto, J., Skok, J.R., Elphic, R.C., Kobayashi, L., Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2014 Fall Meeting, Abstract V13C-4789</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Reconstruction of a Phreatic Explosion from Block Dispersion Modeling at King's Bowl, Idaho (Invited)</p>
+                    <p class="pub-authors">Kobs-Nawotniak, S., Sears, D.W.G., Hughes, S.S., Borg, C., Sears, H., Skok, J.R., Elphic, R.C., Lim, D.S.S., Heldmann, J.L., <span class="highlight-author">Haberle, C.W.</span>, Guy, H., Kobayashi, L., Garry, W.B., Neish, C., Kyeong, J.K.</p>
+                    <p class="pub-venue">AGU 2014 Fall Meeting, Abstract V13E-04</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Mineralogical complexity of altered kamacite in Sutter's Mill (SM3, pre-rain): insights into asteroidal dehydration</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Garvie, L.A., Domanik, K.J., Christensen, P.R.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2014, no. 2818</p>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-year">2013</div>
+
+                <div class="publication">
+                    <p class="pub-title">Metamorphic Formation of Extraterrestrial Portlandite in the Sutter's Mill Meteorite (SM3)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Garvie, L.A., Domanik, K.J., Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2013 Fall Meeting, Abstract P31B-1809</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Calcium-Sulfur-Chlorine Bearing Phases Within Sutter's Mill Sample SM3 (Pre-Rain)</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Garvie, L.A., Domanik, K.J., Christensen, P.R.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2013, no. 2810</p>
+                </div>
+
+                <!-- 2012 -->
+                <div class="pub-year">2012</div>
+
+                <div class="publication">
+                    <p class="pub-title">Planetary Lake Lander: Using Technology Relevant to Titan's Exploration to Investigate the Impact of Deglaciation on Past and Present Planetary Lakes</p>
+                    <p class="pub-authors">Cabrol, N.A, Grin, E.A, <span class="highlight-author">Haberle, C.W.</span>, Moersch, J.E., Jacobsen, J.E., Sommaruga, R., Fleming, E.D., Detweiler, A.M., Echeverria, A., Blanco, Y., Rivas, L.A., Pedersen, L., Smith, T., Wettergreen, D., Demergasso, C., Parro, V., Fong, T., Chong, G., Bebout, L.</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2012, no. 2147</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Exploring Planetary Analogs: Environmental Monitoring and Lake Bottom Mapping at Planetary Lake Lander 2011</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Cabrol, N.A, Grin, E.A</p>
+                    <p class="pub-venue">Lunar and Planetary Science Conference 2012, no. 2705</p>
+                </div>
+
+                </div> <!-- end publications-list -->
+
+                <p style="margin-top: 3rem;"><a href="index.html" class="back-link">← Back to main page</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Christopher Haberle, Ph.D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    <script type="module">
+        import { initPublications, filterPublications, filterByYear, getYears } from './src/js/modules/publications-renderer.js';
+
+        // Initialize publications on page load
+        initPublications().then(() => {
+            // Populate year filter
+            const yearFilter = document.getElementById('year-filter');
+            if (yearFilter) {
+                const years = getYears();
+                years.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearFilter.appendChild(option);
+                });
+            }
+        });
+
+        // Setup search functionality
+        const searchInput = document.getElementById('pub-search');
+        if (searchInput) {
+            let searchTimeout;
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    filterPublications(e.target.value);
+                }, 300); // Debounce search
+            });
+        }
+
+        // Setup year filter
+        const yearFilter = document.getElementById('year-filter');
+        if (yearFilter) {
+            yearFilter.addEventListener('change', (e) => {
+                filterByYear(e.target.value);
+            });
+        }
+
+        // Setup clear filters button
+        const clearBtn = document.getElementById('clear-filters');
+        if (clearBtn) {
+            clearBtn.addEventListener('click', () => {
+                if (searchInput) searchInput.value = '';
+                if (yearFilter) yearFilter.value = 'all';
+                filterPublications('');
+            });
+        }
+    </script>
+</body>
+</html>

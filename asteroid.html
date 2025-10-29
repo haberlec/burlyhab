@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asteroid 333005 Haberle - Named after Christopher Haberle, Ph.D.">
+    <title>Asteroid 333005 Haberle - Christopher Haberle, Ph.D.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/pages/asteroid.css">
+</head>
+<body>
+    <div class="asteroid-hero">
+        <div class="asteroid-content">
+            <h1 class="asteroid-title">Asteroid 333005 Haberle</h1>
+            <p class="asteroid-subtitle">A Main Belt Asteroid</p>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">Named in honor of Christopher Haberle's contributions to planetary science</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <a href="index.html" class="back-link">← Back to main page</a>
+
+                <!-- Discovery Image - Centered and Larger -->
+                <div style="text-align: center; margin: 3rem 0;">
+                    <img src="CSS_ML_2022Apr30_wArrows.gif"
+                         alt="Discovery image of asteroid 333005 Haberle"
+                         style="max-width: 90%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                    <p class="discovery-caption" style="margin-top: 1.5rem; font-style: italic; color: var(--gunmetal); font-size: 1rem;">
+                        Mt. Lemmon Survey telescope image of asteroid 333005 Haberle<br>
+                        The asteroid appears as a moving point of light indicated by arrows<br>
+                        (Discovered February 13, 2010)
+                    </p>
+                </div>
+
+                <!-- Official Naming Citation & Orbital Data -->
+                <div class="naming-story">
+                    <h3>Official Naming Citation</h3>
+                    <p style="font-size: 1.2rem; font-style: italic; text-align: center; margin: 2rem 0 3rem 0;">
+                        "Christopher Haberle (b. 1985) is an American geologist. He was a member of the OSIRIS-REx Thermal Emission
+                        Spectrometer instrument team and is Deputy Instrument Scientist for the OSIRIS-APEX extended mission."
+                    </p>
+
+                    <table class="orbital-table" style="background: rgba(255,255,255,0.15); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Designation</td>
+                            <td style="color: white;">333005 Haberle</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Provisional Designations</td>
+                            <td style="color: white;">2010 HC56, 2011 JV15</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Orbit Type</td>
+                            <td style="color: white;">Main Belt Asteroid</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Semi-major Axis</td>
+                            <td style="color: white;">3.135 AU</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Eccentricity</td>
+                            <td style="color: white;">0.060</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Inclination</td>
+                            <td style="color: white;">17.32°</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Orbital Period</td>
+                            <td style="color: white;">5.55 years</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Absolute Magnitude</td>
+                            <td style="color: white;">15.86</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Discovery Date</td>
+                            <td style="color: white;">February 13, 2010</td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgba(255,255,255,0.9);">Discovery Site</td>
+                            <td style="color: white;">Mt. Lemmon Survey</td>
+                        </tr>
+                    </table>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 1rem; text-align: center;">
+                        <em>Data from the <a href="https://minorplanetcenter.net/db_search/show_object?object_id=333005" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: underline;">Minor Planet Center</a></em>
+                    </p>
+                </div>
+
+                <div class="orbit-viz">
+                    <h3>Interactive 3D Orbit Visualization</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Asteroid 333005 Haberle orbits in the main asteroid belt between Mars and Jupiter. With a semi-major axis of 3.135 AU
+                        and an orbital period of 5.55 years, it follows a nearly circular orbit with low eccentricity (0.060) and a moderate
+                        inclination of 17.32° relative to the ecliptic plane.
+                    </p>
+
+                    <!-- 3D Orbit Viewer Container -->
+                    <div id="orbit-container" style="width: 100%; height: 600px; background: #000; border-radius: 8px; position: relative;">
+                        <div id="loading-message" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 1.2rem;">
+                            Loading 3D visualization...
+                        </div>
+                        <canvas id="orbit-canvas"></canvas>
+
+                        <!-- Controls overlay -->
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: white; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; font-size: 0.9rem;">
+                            <strong>Controls:</strong><br>
+                            🖱️ Left click + drag: Rotate<br>
+                            🖱️ Right click + drag: Pan<br>
+                            🖱️ Scroll: Zoom<br>
+                            <button id="reset-view" style="margin-top: 5px; padding: 5px 10px; background: var(--savoy-blue); color: white; border: none; border-radius: 3px; cursor: pointer;">Reset View</button>
+                        </div>
+
+                        <!-- Info overlay -->
+                        <div id="info-overlay" style="position: absolute; top: 10px; right: 10px; color: white; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; font-size: 0.9rem; max-width: 200px;">
+                            <strong>333005 Haberle</strong><br>
+                            <span id="current-date"></span><br>
+                            <span id="asteroid-distance"></span>
+                        </div>
+                    </div>
+
+                    <!-- Include Three.js and OrbitControls from CDN -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+                    <!-- 3D Orbit Visualization Script -->
+                    <!-- Three.js visualization moved to external module -->
+                    <script type="module" src="src/js/modules/asteroid-visualization.js"></script>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="https://ssd.jpl.nasa.gov/tools/orbit_viewer.html#/?des=333005"
+                           target="_blank"
+                           style="display: inline-block; padding: 1rem 2rem; background: var(--savoy-blue); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background 0.3s;">
+                            View in NASA JPL Orbit Viewer →
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.05); border-radius: 8px;">
+                        <p style="font-size: 0.9rem; color: var(--gunmetal); text-align: center;">
+                            <strong>Position Calculation:</strong> This visualization computes real-time positions using Keplerian orbital mechanics
+                            based on the asteroid's orbital elements from the Minor Planet Center. The calculations solve Kepler's equation
+                            to determine the current position along the orbit, accounting for the asteroid's eccentricity, inclination,
+                            and orientation in space.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; padding: 2rem; background: var(--alice-blue); border-radius: 8px;">
+                    <h3 style="color: var(--hunter-green); margin-bottom: 1rem;">About Main Belt Asteroids</h3>
+                    <p>
+                        Main belt asteroids orbit the Sun between Mars and Jupiter, typically at distances of 2.1 to 3.3 astronomical units (AU).
+                        These rocky bodies are remnants from the early Solar System that never coalesced into a planet due to Jupiter's gravitational influence.
+                        The main asteroid belt contains millions of objects ranging from tiny pebbles to the dwarf planet Ceres, which is nearly 1,000 km in diameter.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Studying main belt asteroids like 333005 Haberle provides crucial insights into the conditions present during planetary formation
+                        4.6 billion years ago. Their compositions and orbits preserve a record of the early Solar System's evolution, making them
+                        invaluable targets for scientific investigation.
+                    </p>
+                </div>
+
+                <p style="margin-top: 3rem; text-align: center;">
+                    <a href="index.html" class="back-link">← Back to main page</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Christopher Haberle, Ph.D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

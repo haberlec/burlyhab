@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic personal webpage of Chris Haberle, Research Professor at [University]">
+    <title>Chris Haberle - Research Professor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero-header">
+        <div class="microscope-images">
+            <picture class="microscope-base">
+                <source
+                    type="image/webp"
+                    srcset="assets/images/optimized/CMC_ppol_aligned_small.webp 640w,
+                            assets/images/optimized/CMC_ppol_aligned_medium.webp 1280w,
+                            assets/images/optimized/CMC_ppol_aligned_large.webp 1920w"
+                    sizes="100vw">
+                <img
+                    src="assets/images/optimized/CMC_ppol_aligned_fallback.jpg"
+                    alt="Plane polarized light microscopy"
+                    width="1920"
+                    height="944">
+            </picture>
+            <picture class="microscope-overlay">
+                <source
+                    type="image/webp"
+                    srcset="assets/images/optimized/CMC_xpol_aligned_small.webp 640w,
+                            assets/images/optimized/CMC_xpol_aligned_medium.webp 1280w,
+                            assets/images/optimized/CMC_xpol_aligned_large.webp 1920w"
+                    sizes="100vw">
+                <img
+                    src="assets/images/optimized/CMC_xpol_aligned_fallback.jpg"
+                    alt="Cross polarized light microscopy"
+                    width="1920"
+                    height="944">
+            </picture>
+        </div>
+        <div class="hero-content">
+            <h1>Chris Haberle, Ph.D.</h1>
+            <p class="hero-title">Assistant Research Professor</p>
+            <p class="hero-affiliation">Department of Astonomy and Planetary Science<br>Northern Arizona University</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="bio">
+                    <h2>About Me</h2>
+                    <p>
+                        I am an Assistant Research Professor in the Department of Astronomy and Planetary Science at Northern Arizona University, where I lead multiple NASA-funded research projects focused on understanding the composition and evolution of planetary surfaces throughout our Solar System. My research combines thermal infrared spectroscopy, advanced data analysis techniques, and field investigations to unravel the geological histories of asteroids, Mars, and the Moon.
+                    </p>
+                    <p>
+                        I earned my Ph.D. in Geological Sciences from Arizona State University's School of Earth and Space Exploration in 2018, where I worked under Dr. Phil Christensen developing innovative approaches to interpret the petrology of planetary surfaces through remote sensing. My dissertation integrated analytical and remote sensing techniques across three complementary areas: the mineralogy and thermal metamorphism of carbonaceous meteorites including the Sutter's Mill fall, terrestrial volcanic analogs from Craters of the Moon National Monument as spectral analogs for lunar and Martian terrains, and thermodynamic modeling of Martian volcanic compositions.
+                    </p>
+                    <p>
+                        As a member of the OSIRIS-REx mission team since 2010, I have played a key role in characterizing asteroid Bennu's surface composition through thermal emission spectroscopy. Currently serving as Deputy Instrument Scientist for OTES on the extended OSIRIS-APEX mission to asteroid Apophis, I lead science operations planning and thermophysical analysis efforts. My work developing improved emissivity derivation methods for rough planetary surfaces has improved our understanding of Bennu's spectral and thermophysical properties and will be crucial for understanding Apophis during its historic close approach to Earth in 2029.
+                    </p>
+                    <p>
+                        My research portfolio spans multiple active NASA missions and technology development projects. As Project Manager for the VISIONS instrument on NASA's ESCAPADE mission to Mars, I oversee the development of innovative dual-wavelength imaging systems for planetary exploration. As Principal Investigator of a NASA PSTAR project, I lead field campaigns to terrestrial hot springs, developing autonomous targeting algorithms and spectroscopic techniques to identify biosignatures in silica sinter deposits—work that directly informs our search for evidence of ancient life on Mars.
+                    </p>
+                    <p>
+                        Throughout my career, I have contributed to over 20 peer-reviewed publications in leading journals including Nature Astronomy, Science Advances, and Geochimica et Cosmochimica Acta. My research has been supported by over $3 million in NASA funding, enabling me to mentor the next generation of planetary scientists through support for graduate students and postdoctoral researchers. I am passionate about advancing our understanding of planetary processes through innovative spectroscopic techniques and fostering collaborative, interdisciplinary approaches to Solar System exploration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <div class="container">
+                <h2>Current Projects</h2>
+                <div class="projects-grid">
+                    <!-- OSIRIS-APEX Project -->
+                    <div class="project-card" data-project="apex">
+                        <div class="project-card-content">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/images/projects/apex_osiris.webp">
+                                    <img src="assets/images/projects/apex_osiris.jpg"
+                                         alt="OSIRIS-APEX mission approaching asteroid Apophis"
+                                         loading="lazy">
+                                </picture>
+                                <span class="mission-badge">NASA Mission</span>
+                            </div>
+                            <div class="project-details">
+                                <h4>OSIRIS-APEX Mission to Asteroid Apophis</h4>
+                                <p class="project-role"><strong>Role:</strong> Co-Investigator and Deputy Instrument Scientist for OTES</p>
+                                <p class="project-description">OSIRIS-APEX is NASA's extended mission of the successful OSIRIS-REx spacecraft, repurposed to study the potentially hazardous asteroid (99942) Apophis. This S-type asteroid will make an exceptionally close approach to Earth on April 13, 2029, passing within 32,000 km of our planet's surface—closer than geostationary satellites. As Deputy Instrument Scientist for OTES, I lead thermal infrared spectroscopic investigations to determine Apophis's mineralogy, thermophysical properties, and surface heterogeneity.</p>
+                                <div class="project-highlights">
+                                    <p class="project-highlights-title">Key Focus Areas</p>
+                                    <div class="highlight-tags">
+                                        <span class="highlight-tag">Thermal Spectroscopy</span>
+                                        <span class="highlight-tag">Asteroid Composition</span>
+                                        <span class="highlight-tag">2029 Earth Flyby</span>
+                                    </div>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-dot"></span>
+                                    <span>Active Mission</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VISIONS/ESCAPADE Project -->
+                    <div class="project-card" data-project="visions">
+                        <div class="project-card-content">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/images/projects/visions_escapade.webp">
+                                    <img src="assets/images/projects/visions_escapade.jpg"
+                                         alt="VISIONS instrument flight hardware for ESCAPADE Mars mission"
+                                         loading="lazy">
+                                </picture>
+                                <span class="mission-badge">Mars 2025</span>
+                            </div>
+                            <div class="project-details">
+                                <h4>VISIONS Instrument on NASA's ESCAPADE Mission to Mars</h4>
+                                <p class="project-role"><strong>Role:</strong> Project Manager and Visible Camera Calibration Lead</p>
+                                <p class="project-description">The Visible and Infrared Observation System (VISIONS) is a dual-wavelength imaging system aboard NASA's ESCAPADE mission, scheduled to launch to Mars in 2025. ESCAPADE consists of twin spacecraft that will orbit Mars to study the planet's magnetosphere and atmospheric escape processes. As Project Manager, I oversee the instrument's development, integration, and testing phases, while also leading calibration protocols to ensure precise photometric and radiometric measurements throughout the mission.</p>
+                                <div class="project-highlights">
+                                    <p class="project-highlights-title">Key Technologies</p>
+                                    <div class="highlight-tags">
+                                        <span class="highlight-tag">Dual-Wavelength Imaging</span>
+                                        <span class="highlight-tag">Mars Atmosphere</span>
+                                        <span class="highlight-tag">2025 Launch</span>
+                                    </div>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-dot"></span>
+                                    <span>In Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NASA PSTAR Project -->
+                    <div class="project-card" data-project="pstar">
+                        <div class="project-card-content">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/images/projects/pstar_silica.webp">
+                                    <img src="assets/images/projects/pstar_silica.jpg"
+                                         alt="Silica sinter samples from terrestrial hot springs analog research"
+                                         loading="lazy">
+                                </picture>
+                                <span class="mission-badge">NASA PSTAR</span>
+                            </div>
+                            <div class="project-details">
+                                <h4>In Situ Exploration of Terrestrial Silica Sinter Deposits</h4>
+                                <p class="project-role"><strong>Role:</strong> Principal Investigator</p>
+                                <p class="project-description">This NASA-funded Planetary Science and Technology through Analog Research project investigates silica sinter deposits at terrestrial hot springs as analogs for potential biosignature-bearing deposits on Mars. Our custom instrument suite, Terra-TES and Terra-Cam, incorporates machine learning algorithms for autonomous target selection. Field campaigns at Roosevelt Hot Springs, Utah, and the Puchuldiza geothermal field in Chile provide crucial insights into spectral signatures across varying preservation states.</p>
+                                <div class="project-highlights">
+                                    <p class="project-highlights-title">Research Focus</p>
+                                    <div class="highlight-tags">
+                                        <span class="highlight-tag">Biosignature Detection</span>
+                                        <span class="highlight-tag">Machine Learning</span>
+                                        <span class="highlight-tag">Mars Analogs</span>
+                                    </div>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-dot"></span>
+                                    <span>Field Research Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NASA NFDAP Project -->
+                    <div class="project-card" data-project="nfdap">
+                        <div class="project-card-content">
+                            <div class="project-image">
+                                <img src="assets/images/projects/nfdap_bennu.svg"
+                                     alt="Thermal modeling visualization of asteroid Bennu surface roughness"
+                                     loading="lazy"
+                                     style="padding: 20px;">
+                                <span class="mission-badge">Data Analysis</span>
+                            </div>
+                            <div class="project-details">
+                                <h4>Refining Bennu's Surface Composition through Improved OTES Emissivity</h4>
+                                <p class="project-role"><strong>Role:</strong> Principal Investigator</p>
+                                <p class="project-description">This NASA New Frontiers Data Analysis Program project advances our understanding of asteroid Bennu's surface composition by developing improved methods for deriving emissivity spectra from OSIRIS-REx OTES observations. Our novel constrained least squares fitting routine accounts for Bennu's unexpectedly rough surface, enabling identification of carbonates, molecular water, and fine-particulate dust previously undetectable due to spectral artifacts.</p>
+                                <div class="project-highlights">
+                                    <p class="project-highlights-title">Technical Innovation</p>
+                                    <div class="highlight-tags">
+                                        <span class="highlight-tag">Spectral Analysis</span>
+                                        <span class="highlight-tag">Surface Roughness</span>
+                                        <span class="highlight-tag">Bennu Samples</span>
+                                    </div>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-dot"></span>
+                                    <span>Analysis Phase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="container">
+                <h2>Selected Publications</h2>
+
+                <h3>Journal Articles</h3>
+
+                <div class="publication">
+                    <p class="pub-title">Diurnal and Seasonal Mapping of Martian Ices with EMIRS</p>
+                    <p class="pub-authors">Stcherbinine, A., Edwards, C.S., Smith, M.D., Wolff, M.J., <span class="highlight-author">Haberle, C.W.</span>, Tunaiji, E., Smith, N.S., Saboi, K., Anwar, S., Lange, L., Christensen, P.R</p>
+                    <p class="pub-venue">Geophysical Research Letters, 2023</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Evidence for limited compositional and particle size variation on asteroid (101955) Bennu from thermal infrared spectroscopy</p>
+                    <p class="pub-authors">Hamilton, V.E., Christensen, P.R., Kaplan, H.H., <span class="highlight-author">Haberle, C.W.</span>, Rogers, A.D., Glotch, T.D., Breitenfeld, L.B., Goodrich, C.A., Schrader, D.L., McCoy, T.J., Lantz, C., Hanna, R.D., Simon, A.A., Brucato, J.R., Clark, B.E., Lauretta, D.S.</p>
+                    <p class="pub-venue">Astronomy and Astrophysics, 2021</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Effects of small crystallite size on the thermal infrared (vibrational) spectra of minerals</p>
+                    <p class="pub-authors">Hamilton, V.E., <span class="highlight-author">Haberle, C.W.</span>, Mayerhöfer, T.G.</p>
+                    <p class="pub-venue">American Mineralogist, 2020</p>
+                </div>
+
+                <h3>Conference Presentations</h3>
+
+                <div class="publication">
+                    <p class="pub-title">The VISible and Infrared ObservatioN System (VISIONS) Overview: A Low-Cost, Dual-Wavelength Imager for Planetary Science Applications</p>
+                    <p class="pub-authors">Lee, L., Edwards, C.S., <span class="highlight-author">Haberle, C.W.</span>, Shafer, M., Trilling, D., Janiszewska, J., Klingaman, A., Lillis, R.J.</p>
+                    <p class="pub-venue">AGU 2023 Fall Meeting, Abstract P34A-09</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Surface Roughness of Bennu Derived from OSIRIS-REx Thermal Emission Spectrometer Observations</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Edwards, C.S., Tai-Udovicic, C., Bandfield, J.L., Clark, B.E.</p>
+                    <p class="pub-venue">Geological Society of America 2021, no. 108-12</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Interpreting the Petrogenetic History of Martian Volcanic Rocks using Thermal Emission Spectroscopy and Thermodynamic Calculations of Phase Equilibria</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Christensen, P.R., Ruff, S.W.</p>
+                    <p class="pub-venue">AGU 2019 Fall Meeting, Abstract P33F-3494</p>
+                </div>
+
+                <div class="publication">
+                    <p class="pub-title">Ferrobasalt from the Snake River Plain and its Utility as a Spectral Planetary Analog</p>
+                    <p class="pub-authors"><span class="highlight-author">Haberle, C.W.</span>, Christensen, P.R.</p>
+                    <p class="pub-venue">AGU 2018 Fall Meeting, Abstract P51C-07</p>
+                </div>
+
+                <p style="margin-top: 2rem;"><a href="publications.html" class="view-all">View complete publication list →</a></p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:ch232@nau.edu">ch232@nau.edu</a></p>
+                    <p><strong>Office:</strong> Building 19, Room 209</p>
+                    <p><strong>Address:</strong><br>
+                        Department of Astronomy and Planetary Science<br>
+                        Northern Arizona University <br>
+                        527 S. Beaver St.<br>
+                        Flagstaff, AZ 86011
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#">Google Scholar</a>
+                    <a href="#">ResearchGate</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">ORCID</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

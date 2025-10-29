@@ -1,0 +1,22 @@
+/**
+ * Main CSS Aggregator
+ * Imports all modular CSS files in the correct order
+ */
+
+/* Base Styles & Variables */
+@import url('../../styles.css');  /* Original main styles with variables */
+
+/* Page-Specific Styles */
+@import url('./pages/asteroid.css');
+@import url('./pages/editor.css');
+@import url('./pages/publications.css');
+
+/* Additional Imports (for future modularization) */
+/* @import url('./base/variables.css'); */
+/* @import url('./base/reset.css'); */
+/* @import url('./base/typography.css'); */
+/* @import url('./components/header.css'); */
+/* @import url('./components/footer.css'); */
+/* @import url('./components/cards.css'); */
+/* @import url('./layout/grid.css'); */
+/* @import url('./animations/keyframes.css'); */
